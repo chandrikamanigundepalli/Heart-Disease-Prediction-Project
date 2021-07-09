@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      href="{{ url_for('static', filename='bootstrap.css') }}"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+    <title>Food tips</title>
+    <style type="text/css">
+      html{
+      background-image: linear-gradient(to bottom right,#c0ffa3, #c0ffa3);
+    }
+    body{
+      background-color: #c0ffa3;
+    }
+    nav{
+		background:#ff6347;
+		width:100%;
+		overflow:auto;
+	}
+    ul{
+    	margin:0;
+    	padding-bottom:20px;
+    	list-style:none;
+    }
+    li{
+    	float:right;
+    }
+	nav a{
+		width:120px;
+		display:block;
+		text-align:center;
+		background:#ff6347;
+		font-size: 17px;
+		color:white;
+		padding:20px 10px;
+		font-family: arial;
+	}
+	ul li a:hover{
+	background-color: #cd5c5c;
+	color: #000;
+	}
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/doc">Doctors</a></li>
+        <li><a href="/tips">Health tips</a></li>
+        <li><a href="/home1">Home</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <br>
+      <div class="text-center">
+        <h2 class="text-center">Food tips for heart Patients</h2>
+        <img src="{{url_for('static', filename='food1.png')}}">
+      </div>
+    </div>
+  </body>
+</html>

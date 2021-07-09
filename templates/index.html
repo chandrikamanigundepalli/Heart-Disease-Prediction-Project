@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Heart Disease Prediction</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='bootstrap.css') }}"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  </head>
+  <style type="text/css">
+    html{
+      background-image: linear-gradient(to bottom right, #b1f7ba, #e8f0ec);
+    }
+    body{
+      background-color:#fcd7a9;
+    }
+    nav{
+		background:#ff6347;
+		width:100%;
+		overflow:auto;
+	}
+    ul{
+    	margin:0;
+    	padding-bottom:20px;
+    	list-style:none;
+    }
+    li{
+    	float:right;
+    }
+	nav a{
+		width:120px;
+		display:block;
+		text-align:center;
+		background:#ff6347;
+		font-size: 17px;
+		color:white;
+		padding:20px 10px;
+		font-family: arial;
+	}
+	ul li a:hover{
+	background-color: #cd5c5c;
+	color: #000;
+	}
+  </style>
+  <body>
+    <nav>
+		
+      <ul>
+        <li><a href="/doc">Doctors</a></li>
+        <li><a href="/tips">Health tips</a></li>
+        <li><a href="/home1">Home</a></li>
+      </ul>
+    </nav>
+   <div class="wrapper">
+    <div class="container">
+      <br>
+      <div class="text-center">
+        <img src="{{url_for('static', filename='image.png')}}">
+      </div>
+      <br>
+      <h2 class="text-center">Heart Disease Prediction</h2>
+      <br>
+      <hr/>
+      <form action="/index" method="POST">
+        <div class="container">
+          <div class="row">
+            <div class="col-4">
+              <div class="form-group">
+              <label for="feedback1">Age</label>
+              <input type="int" required name="feedback1" class="form-control" placeholder="Enter Age">
+              <br/>
+              <label for="feedback2">Sex</label>
+              <select class="custom-select" name="feedback2" required>
+                <option value="">select the gender</option>
+                <option value="0">Female</option>
+                <option value="1">Male</option>
+              </select>
+              <br/>
+              <label for="feedback3">Chest_Pain_type</label>
+              <select class="custom-select" name="feedback3" required>
+                <option value="">Choose the pain type</option>
+                <option value="0">Typical Angina</option>
+                <option value="1">Atypical Angina</option>
+                <option value="2">Non-anginal pain</option>
+                <option value="3">Asymptotic</option>
+              </select>
+              <br/>
+              <label for="feedback4">Resting_Blood_Pressure</label>
+              <input type="float" required name="feedback4" class="form-control" placeholder="Enter Blood Pressure Value">
+              <br/>
+              <label for="feedback5">Serum_Cholestrol</label>
+              <input type="float" required name="feedback5" class="form-control" placeholder="Enter Cholestrol Value">
+              <br/>
+              <label for="feedback6">Fasting_Blood_Sugar</label>
+              <select class="custom-select" name="feedback6" required>
+                <option value="">select the Sugar level</option>
+                <option value="0">Less than 120</option>
+                <option value="1">Greater than 120</option>
+              </select>
+              <br/>
+              <label for="feedback7">Resting_ECG</label>
+              <select class="custom-select" name="feedback7" required>
+                <option value="">Choose a Level</option>
+                <option value="0">Normal</option>
+                <option value="1">ST-T wave abnormality</option>
+                <option value="2">Left ventriculaar hypertrophy</option>
+              </select>
+              <br/>
+              <label for="feedback8">Max_heart_rate_acheived</label>
+              <input type="float" required name="feedback8" class="form-control" placeholder="Enter heart rate Value">
+              <br/>
+              <label for="feedback9">Exercise_induced_angina</label>
+              <select class="custom-select" name="feedback9" required>
+                <option value="">Choose a Level</option>
+                <option value="0">No</option>
+                <option value="1">yes</option>
+              </select>
+              <br/>
+              <label for="feedback0">Thalassemia Level</label>
+              <select class="custom-select" name="feedback0" required>
+                <option value="">Choose a Level</option>
+                <option value="1">Normal</option>
+                <option value="2">Fixed defect</option>
+                <option value="3">Reversible defect</option>
+              </select>
+              <br/>
+             </div>
+           </div>
+           <br/>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-8">
+              <button class="btn btn-primary btn-block" style="background-color:#3119e6" type="submit">Predict</button>
+            </div>
+            <div class="col-4">
+              <a class="btn btn-danger btn-block" style="background-color:#e31e45" href="">Clear</a>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+
+    <script src="{{ url_for('static', filename='bootstrap.js') }}"></script>
+  </body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   	<title>Prediction form</title>
+     <style>*{
+      margin:0;
+      padding:0;
+    }
+    body{
+      background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('static/doc.jpg');
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+    }
+    div.main{
+      width: 400px;
+      margin: 100px auto 0px auto;
+    }
+    h2{
+      text-align: center;
+      padding: 20px;
+      font-family: sans-serif;
+    }
+    div.predict{
+      background-color: rgba(0,0,0,0.5);
+      width:100%;
+      font-size: 18px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.3);
+      box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+      color: #fff;
+    }
+    form#predict{
+      margin: 40px;
+    }
+    label{
+      font-family: sans-serif;
+      font-size: 18px;
+      font-style: italic;
+    }
+    input#name{
+      width: 300px;
+      border:1px solid #ddd;
+      border-radius: 3px;
+      outline: 0;
+      padding: 7px;
+      background-color: #fff;
+      box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);
+    }
+    select#name{
+      width: 300px;
+      border:1px solid #ddd;
+      border-radius: 3px;
+      outline: 0;
+      padding: 7px;
+      background-color: #fff;
+      box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);
+    }
+    button#submit{
+      width:200px;
+      padding: 7px;
+      font-size: 20px;
+      font-family: sans-serif;
+      font-weight: 600;
+      border-radius: 3px;
+      background-color: rgba(250,100,0,0.8);
+      color: #fff;
+      cursor:pointer;
+      border: 1px solid rgba(255,255,255,0.3);
+      box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+      margin-bottom: 20px;
+    }
+    label,h2{
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+    }
+    </style>
+   </head>
+   <body>
+   	<div class="main">
+   		<div class="predict">
+    	<h2 class="text-center">Heart Disease Prediction</h2>
+      <form id="/values" method="POST">
+              <label for="feedback1">Age :</label>
+              <input id="name" type="int" required name="feedback1" class="form-control" placeholder="Enter Age">
+              <br><br>
+              <label for="feedback2">Sex :</label>
+              <select id="name" class="custom-select" name="feedback2" required>
+                <option value="">select the gender</option>
+                <option value="0">Female</option>
+                <option value="1">Male</option>
+              </select>
+              <br><br>
+              <label for="feedback3">Chest_Pain_type :</label>
+              <select id="name" class="custom-select" name="feedback3" required>
+                <option value="">Choose the pain type</option>
+                <option value="0">Typical Angina</option>
+                <option value="1">Atypical Angina</option>
+                <option value="2">Non-anginal pain</option>
+                <option value="3">Asymptotic</option>
+              </select>
+              <br><br>
+              <label for="feedback4">Resting_Blood_Pressure :</label>
+              <input id="name" type="float" required name="feedback4" class="form-control" placeholder="Enter Blood Pressure Value">
+              <br><br>
+              <label for="feedback5">Serum_Cholestrol :</label>
+              <input id="name" type="float" required name="feedback5" class="form-control" placeholder="Enter Cholestrol Value">
+              <br><br>
+              <label for="feedback6">Fasting_Blood_Sugar :</label>
+              <select id="name" class="custom-select" name="feedback6" required>
+                <option value="">select the Sugar level</option>
+                <option value="0">Less than 120</option>
+                <option value="1">Greater than 120</option>
+              </select>
+              <br><br>
+              <label for="feedback7">Resting_ECG :</label>
+              <select id="name" class="custom-select" name="feedback7" required>
+                <option value="">Choose a Level</option>
+                <option value="0">Normal</option>
+                <option value="1">ST-T wave abnormality</option>
+                <option value="2">Left ventriculaar hypertrophy</option>
+              </select>
+              <br><br>
+              <label for="feedback8">Max_heart_rate_acheived :</label>
+              <input id="name" type="float" required name="feedback8" class="form-control" placeholder="Enter heart rate Value">
+              <br><br>
+              <label for="feedback9">Exercise_induced_angina :</label>
+              <select id="name" class="custom-select" name="feedback9" required>
+                <option value="">Choose a Level</option>
+                <option value="0">No</option>
+                <option value="1">yes</option>
+              </select>
+              <br><br>
+              <label for="feedback0">Thalassemia Level :</label>
+              <select id="name" class="custom-select" name="feedback0" required>
+                <option value="">Choose a Level</option>
+                <option value="1">Normal</option>
+                <option value="2">Fixed defect</option>
+                <option value="3">Reversible defect</option>
+              </select>
+              <br><br>
+              <button type="submit" id="submit"><a href="/result">Predict</a></button>
+              <button type="submit" id="submit" background=#b22222><a href="/">clear</a></button>
+        </form>
+             </div>
+           </div>
+    </body>
+</html>
